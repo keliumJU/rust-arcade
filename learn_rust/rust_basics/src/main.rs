@@ -1,11 +1,17 @@
+mod models;
+
+use crate::models::car::{
+    show_car
+};
+
 //Structs
 //Clasic struct
 struct Student {
     name: String,
     level: u8,
+
     remote: bool,
 }
-
 //Tuple struct with data types only
 struct Grades(char, char, char, char, f32);
 
@@ -43,7 +49,12 @@ fn divide_by_5(num: u32) -> u32 {
     num / 5
 }
 
+
+mod enums;
+
 fn main() {
+    enums::sum();
+
     let mut a_number;
     let a_word = "Ten";
 
