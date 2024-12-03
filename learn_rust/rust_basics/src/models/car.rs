@@ -20,9 +20,28 @@ pub enum Transmission {
 }
 
 
-pub fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Car {
+pub fn car_factory(order: i32, miles: u32) -> Car {
+    let colors = ["Blue", "Green", "Red", "Black"];
+    
+    let mut color = order as usize;
+
+    while color > 4 {
+        color = color - 4;
+    }
+
+    let mut motor = Transmission::Manual;
+    let mut roof = true;
+
+    if order % 3 == 0 {
+        motor = Transmission::Automatic;
+    } else if order % 2 == 0 {
+        motor = Transmission::SemiAuto;
+        roof = false;
+    }
+
+
     Car {
-        color: color, 
+        color: String::from(colors[(color-1) as usize]), 
         motor: motor, 
         roof: roof, 
         age: car_quality(miles),
@@ -30,20 +49,35 @@ pub fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -
 }
 
 pub fn car_quality(miles: u32) -> (Age, u32) {
-    let quality: (Age, u32) = (Age::New, miles);
+    if miles > 0 {
+        return (Age::Used, miles);
+    }
+
+    let quality: (Age, u32) = (Age::New, 0);
     quality
 }
 
 
+use std::collections::HashMap;
 
-pub fn car_main_ex() {
-    let colors = ["Blue", "Green", "Red", "Silver"];
 
-    let mut car: Car = Car {color: String::from(colors[0]), motor: Transmission::Manual, roof: false, age: (Age::New, 0)};
+pub fn show_car_ex() {
 
-    let mut engine: Transmission = Transmission::Manual;
+    let mut car: Car;
+    let mut orders: HashMap<i32, Car> = HashMap::new();
+    let day_orders = 12;
+    let mut miles = 0;
 
-    car = car_factory(String::from(colors[0]), engine, false, 5);
-    println!("Car 1 = {}, {:?} motor, roof: {}, mileage: {:?}", 
-        car.color, car.motor, car.roof, car.age);
+    for order in 1..day_orders {
+
+        car = car_factory(order, miles);
+        orders.insert(order, car);
+        println!("Car Order {}: {:?}", order, orders.get(&order));
+
+        if miles == 2100 {
+            miles = 0;
+        } else {
+            miles = miles + 700;
+        }
+    }
 }

@@ -1,11 +1,10 @@
 mod models;
-mod arrays;
-mod vectors;
+//mod arrays;
+//mod vectors;
+//mod maps;
 
 use crate::models::car::{
-    Transmission,
-    car_factory,
-    car_main_ex,
+    show_car_ex,
 };
 
 //use crate::arrays::array::{
@@ -16,6 +15,10 @@ use crate::models::car::{
 //    show_vector_ex,
 //};
 
+//use crate::maps::map::{
+//    show_map_ex,
+//};
+
 fn main() {
-    car_main_ex();
+    show_car_ex();
 }
