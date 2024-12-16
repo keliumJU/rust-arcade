@@ -19,12 +19,17 @@ mod models;
 //    show_map_ex,
 //};
 
-use crate::models::person::{
-    show_person_ex,
+//use crate::models::person::{
+//    show_person_ex,
+//};
+
+use crate::models::result::{
+   show_struct_result_ex, 
 };
 
 fn main() {
-    show_person_ex();
+    show_struct_result_ex();
+    //show_person_ex();
     //Show a panic message
     //panic!("Farewell!!");
 
