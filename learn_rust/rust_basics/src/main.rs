@@ -23,12 +23,17 @@ mod models;
 //    show_person_ex,
 //};
 
-use crate::models::result::{
-   show_struct_result_ex, 
+//use crate::models::result::{
+//   show_struct_result_ex, 
+//};
+
+use crate::models::file::{
+    show_read_file_ex,
 };
 
 fn main() {
-    show_struct_result_ex();
+    show_read_file_ex();
+    //show_struct_result_ex();
     //show_person_ex();
     //Show a panic message
     //panic!("Farewell!!");
