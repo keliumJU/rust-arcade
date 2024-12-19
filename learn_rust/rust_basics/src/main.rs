@@ -27,12 +27,19 @@ mod models;
 //   show_struct_result_ex, 
 //};
 
-use crate::models::file::{
-    show_read_file_ex,
+//use crate::models::file::{
+//    show_read_file_ex,
+//};
+
+use crate::models::lifetime::{
+    //show_lifetime_ex,
+    show_lifetime_problem,
 };
 
 fn main() {
-    show_read_file_ex();
+    show_lifetime_problem();
+    //show_lifetime_ex();
+    //show_read_file_ex();
     //show_struct_result_ex();
     //show_person_ex();
     //Show a panic message
