@@ -36,13 +36,17 @@ mod models;
 //    show_lifetime_problem,
 //};
 
-use crate::models::generics::{
-    show_generics_ex,
+//use crate::models::generics::{
+//    show_generics_ex,
+//};
+
+use crate::models::point::{
+    show_point_ex,
 };
 
-
 fn main() {
-    show_generics_ex();
+    show_point_ex();
+    //show_generics_ex();
     //show_lifetime_problem();
     //show_lifetime_ex();
     //show_read_file_ex();

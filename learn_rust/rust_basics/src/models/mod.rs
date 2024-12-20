@@ -4,3 +4,4 @@ pub mod result;
 pub mod file;
 pub mod lifetime;
 pub mod generics;
+pub mod point;
