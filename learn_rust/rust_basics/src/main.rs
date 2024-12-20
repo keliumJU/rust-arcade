@@ -31,13 +31,19 @@ mod models;
 //    show_read_file_ex,
 //};
 
-use crate::models::lifetime::{
-    //show_lifetime_ex,
-    show_lifetime_problem,
+//use crate::models::lifetime::{
+//    //show_lifetime_ex,
+//    show_lifetime_problem,
+//};
+
+use crate::models::generics::{
+    show_generics_ex,
 };
 
+
 fn main() {
-    show_lifetime_problem();
+    show_generics_ex();
+    //show_lifetime_problem();
     //show_lifetime_ex();
     //show_read_file_ex();
     //show_struct_result_ex();
