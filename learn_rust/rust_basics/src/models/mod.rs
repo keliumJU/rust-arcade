@@ -5,3 +5,4 @@ pub mod file;
 pub mod lifetime;
 pub mod generics;
 pub mod point;
+pub mod asjson;

@@ -40,12 +40,17 @@ mod models;
 //    show_generics_ex,
 //};
 
-use crate::models::point::{
-    show_point_ex,
+//use crate::models::point::{
+//    show_point_ex,
+//};
+
+use crate::models::asjson::{
+    show_as_json_ex,
 };
 
 fn main() {
-    show_point_ex();
+    show_as_json_ex();
+    //show_point_ex();
     //show_generics_ex();
     //show_lifetime_problem();
     //show_lifetime_ex();
