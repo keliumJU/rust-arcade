@@ -44,12 +44,22 @@ mod models;
 //    show_point_ex,
 //};
 
-use crate::models::asjson::{
-    show_as_json_ex,
+//use crate::models::asjson::{
+//    show_as_json_ex,
+//};
+
+//use crate::models::iterator::{
+//    show_iterator_ex,
+//};
+
+use crate::models::container::{
+    show_container_ex,
 };
 
 fn main() {
-    show_as_json_ex();
+    show_container_ex();
+    //show_iterator_ex();
+    //show_as_json_ex();
     //show_point_ex();
     //show_generics_ex();
     //show_lifetime_problem();
